@@ -1,0 +1,29 @@
+Algorithme AnalysePhrase
+Variables :
+    phrase : chaîne
+    longueur, nbMots, nbVoyelles : entier
+    voyelles : chaîne = "aeiouyAEIOUY"
+
+Début
+    Lire phrase
+    longueur ← 0
+    nbMots ← 1   // car il y a au moins un mot avant le premier espace
+    nbVoyelles ← 0
+
+    Pour chaque caractère c dans phrase
+        longueur ← longueur + 1
+
+        Si c = ' ' Alors
+            nbMots ← nbMots + 1
+        FinSi
+
+        Si c appartient à voyelles Alors
+            nbVoyelles ← nbVoyelles + 1
+        FinSi
+    FinPour
+
+    Afficher "Longueur :", longueur
+    Afficher "Nombre de mots :", nbMots
+    Afficher "Nombre de voyelles :", nbVoyelles
+Fin
+
