@@ -1,0 +1,89 @@
+Algorithme SommeDistincte
+Variables :
+    E1, E2 : tableaux d'entiers
+    somme : entier
+    i, j : entier
+Début
+    somme ← 0
+
+    // Parcourir E1
+    Pour i de 1 à longueur(E1)
+        Si E1[i] n'est pas dans E2 Alors
+            somme ← somme + E1[i]
+        FinSi
+    FinPour
+
+    // Parcourir E2
+    Pour j de 1 à longueur(E2)
+        Si E2[j] n'est pas dans E1 Alors
+            somme ← somme + E2[j]
+        FinSi
+    FinPour
+
+    Afficher "Somme des éléments distincts :", somme
+Fin
+
+
+
+
+
+Procédure dot_product(v1, v2, ps)
+Variables :
+    i : entier
+Début
+    ps ← 0
+    Pour i de 1 à longueur(v1)
+        ps ← ps + v1[i] * v2[i]
+    FinPour
+Fin
+
+Algorithme Orthogonalité
+Variables :
+    n : entier
+    v1, v2 : tableaux
+    ps : entier
+Début
+    Lire n
+    Pour i de 1 à n
+        Lire v1, v2
+        Appeler dot_product(v1, v2, ps)
+        Si ps = 0 Alors
+            Afficher "Les vecteurs sont orthogonaux"
+        Sinon
+            Afficher "Les vecteurs ne sont pas orthogonaux"
+        FinSi
+    FinPour
+Fin
+
+
+
+
+
+
+
+Fonction dot_product(v1, v2) : entier
+Variables :
+    i, ps : entier
+Début
+    ps ← 0
+    Pour i de 1 à longueur(v1)
+        ps ← ps + v1[i] * v2[i]
+    FinPour
+    Retourner ps
+Fin
+
+Algorithme Orthogonalité
+Variables :
+    n : entier
+    v1, v2 : tableaux
+Début
+    Lire n
+    Pour i de 1 à n
+        Lire v1, v2
+        Si dot_product(v1, v2) = 0 Alors
+            Afficher "Les vecteurs sont orthogonaux"
+        Sinon
+            Afficher "Les vecteurs ne sont pas orthogonaux"
+        FinSi
+    FinPour
+Fin
